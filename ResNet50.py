@@ -5,7 +5,7 @@ import torch.nn as nn
 import torch.optim as optim
 import time
 #@author:RhinoCoder
-#dashes of inits are fixed.
+
 
 class Bottleneck(nn.Module):
     expansion = 4
