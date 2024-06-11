@@ -82,5 +82,5 @@ def main():
     print(f"Incremental Training Accuracy: {accuracy_incremental * 100:.2f}%")
     print(f"Incremental Training Time: {incremental_training_time:.2f} seconds")
 
-if __name__ == '_main_':
+if __name__ == '__main__':
     main()

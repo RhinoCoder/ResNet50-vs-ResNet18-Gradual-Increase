@@ -205,7 +205,7 @@ def main():
 
 
 
-if __name__ == '_main_':
+if __name__ == '__main__':
     start_time = time.time()
     main()
     end_time =time.time()
