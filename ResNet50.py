@@ -29,16 +29,13 @@ class Bottleneck(nn.Module):
     def forward(self, x):
         identity = x.clone()
         x = self.relu(self.batch_norm1(self.conv1(x)))
-
         x = self.relu(self.batch_norm2(self.conv2(x)))
-
         x = self.conv3(x)
         x = self.batch_norm3(x)
 
-        # downsample if needed
         if self.i_downsample is not None:
             identity = self.i_downsample(identity)
-        # add identity
+
         x += identity
         x = self.relu(x)
 
@@ -159,7 +156,7 @@ def main():
     optimizer = optim.SGD(net.parameters(), lr=0.01, momentum=0.9, weight_decay=0.0001)
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor = 0.1, patience=5)
 
-    EPOCHS = 10
+    EPOCHS = 100
     for epoch in range(EPOCHS):
         losses = []
         running_loss = 0
