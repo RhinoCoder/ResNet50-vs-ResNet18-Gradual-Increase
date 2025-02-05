@@ -1,0 +1,9 @@
+# Ignore dataset files and directories
+cifar/
+data/
+
+# Ignore model checkpoint files
+*.pth
+*.pt
+checkpoint.pth
+checkpoints/
