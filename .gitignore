@@ -1,6 +1,6 @@
 # Ignore dataset files and directories
-/cifar/
-/data/
+cifar/
+data/
 
 # Ignore model checkpoint files
 *.pth
@@ -8,4 +8,7 @@
 *.gz
 /checkpoint.pth
 /checkpoints/
-/venv/*
+
+# Ignore virtual environment
+venv/
+/venv/
